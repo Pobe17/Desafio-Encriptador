@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=New+Amsterdam&display=swap');
+
+:root {
+    --primer-color: #640fcd;
+    --segundo-color: #e6e5eb;
+    --text-color: #1F2937;
+    --background-color: #F3F4F6;
+    --card-background-color: #FFF;
+    --border-color: #640fcd;
+    --placeholder-background-color: #F9FAFB;
+    --placeholder-text-color: #6B7280;
+    --button-text-color: #FFF;
+    --button-hover-opacity: 0.9;
+    --font-size-base: 1rem; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "New Amsterdam", sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: var(--font-size-base); 
+}
+
+.container {
+    max-width: 75rem; 
+    width: 100%;
+    background-color: var(--card-background-color);
+    padding: 1.25rem;
+    border-radius: 0.5rem; 
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem; 
+}
+
+header .logo {
+    width: 3.125rem; 
+}
+
+.content {
+    display: flex;
+    gap: 1.25rem; 
+    flex: 1;
+}
+
+.inputText {
+    width: 60%;
+    height: 18.75rem; 
+    padding: 1.25rem; 
+    font-size: 1.125rem; 
+    border: 0.0625rem solid var(--border-color); 
+    border-radius: 0.5rem;
+    resize: none;
+    outline: none;
+    color: var(--text-color);
+}
+
+.output-container {
+    width: 40%;
+    text-align: center;
+    background-color: var(--placeholder-background-color);
+    border: 0.0625rem solid var(--border-color); 
+    border-radius: 0.5rem; 
+    padding: 1.25rem; 
+    position: relative;
+}
+
+.messagePlaceholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.muñeco-imagen {
+    max-width: 9.375rem; 
+    margin-bottom: 1.25rem; 
+}
+
+.outputText {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 1.25rem; 
+    font-size: 1.125rem; 
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+    background: transparent;
+    color: var(--text-color);
+}
+
+.botones {
+    display: flex;
+    gap: 1.25rem; 
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    padding: 0.625rem 1.25rem;
+    font-size: 1.125rem; 
+    border: none;
+    border-radius: 0.5rem; 
+    cursor: pointer;
+    background-color: var(--primer-color);
+    color: var(--button-text-color);
+}
+
+button:last-child {
+    background-color: var(--segundo-color);
+    color: var(--text-color);
+}
+
+button:hover {
+    opacity: var(--button-hover-opacity);
+}
+
+small {
+    color: var(--placeholder-text-color);
+}
+
+@media (max-width: 48rem) { 
+    .content {
+        flex-direction: column;
+    }
+
+    .inputText {
+        width: 100%;
+    }
+
+    .output-container {
+        width: 100%;
+    }
+
+    .inputText {
+        height: 12.5rem; 
+    }
+
+    .output-container {
+        height: 12.5rem; 
+    }
+}
